@@ -36,6 +36,6 @@ public class Horse extends Animal implements AnimalInterface {
 
     @Override
     public String toString() {
-        return super.id+". Koń, "+this.getSexName()+" "+super.toString()+" "+getVoice();
+        return "("+super.id+") Koń, "+this.getSexName()+" "+super.toString()+" "+getVoice();
     }
 }

@@ -4,19 +4,32 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class People {
-    private List<Instance> people;
-    private int id;
+    private List<Human> people;
 
     public People() {
         this.people = new LinkedList<>();
     }
 
-    public void add(Instance instance){
-        this.people.add(instance);
-        instance.setId(people.size());
+    public void add(Human human){
+        this.people.add(human);
+        human.setId(people.size());
     }
 
-    public List<Instance> getPeople() {
+    public Human getHuman(int i){
+        Human returnedHuman = new Human();
+        for(Human el: people){
+            if(i == el.id){
+                returnedHuman = el;
+                break;
+            }else{
+                returnedHuman = null;
+            }
+        }
+        return returnedHuman;
+
+    }
+
+    public List<Human> getPeople() {
         return this.people;
     }
 }

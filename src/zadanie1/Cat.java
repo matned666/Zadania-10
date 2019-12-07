@@ -36,7 +36,7 @@ public class Cat extends Animal implements AnimalInterface {
 
     @Override
     public String toString() {
-        return super.id+". "+this.getSexName()+" "+super.toString()+" "+getVoice();
+        return "("+super.id+") "+this.getSexName()+" "+super.toString()+" "+getVoice();
     }
 
 }

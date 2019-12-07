@@ -3,7 +3,6 @@ package zadanie1;
 public class Dog extends Animal implements AnimalInterface {
 
     public Dog(String name, int age, Sex sex, Human owner) {
-
         super(name, age, sex, owner);
     }
 
@@ -39,6 +38,6 @@ public class Dog extends Animal implements AnimalInterface {
 
     @Override
     public String toString() {
-        return super.id+". "+this.getSexName()+" "+super.toString()+" "+getVoice();
+        return "("+super.id+") "+this.getSexName()+" "+super.toString()+" "+getVoice();
     }
 }

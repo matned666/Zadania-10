@@ -8,6 +8,7 @@ public abstract class Animal extends Instance {
     public Animal(String name, int age, Sex sex, Human owner) {
         super(name, age, sex);
         this.owner = owner;
+
     }
 
     @Override
