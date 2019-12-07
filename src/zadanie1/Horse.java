@@ -1,19 +1,12 @@
 package zadanie1;
 
-public class Horse implements Animal{
+public class Horse extends Animal implements AnimalInterface {
 
-    private int id;
-    private int age;
-    private String name;
-
-    public Horse(int age, String name) {
-        this.age = age;
-        this.name = name;
+    public Horse(String name, int age, Sex sex, Human owner) {
+        super(name, age, sex, owner);
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+
 
     @Override
     public String getVoice() {
@@ -22,7 +15,7 @@ public class Horse implements Animal{
 
     @Override
     public int getAge() {
-        return this.age;
+        return super.age;
     }
 
     @Override
@@ -30,8 +23,19 @@ public class Horse implements Animal{
         return this.name;
     }
 
+    public String getSexName(){
+        if(super.getSex()== Sex.MALE){
+            return "Ogier";
+        }else if(super.getSex()== Sex.FEMALE){
+            return "Suka";
+        }else{
+            return"Wałach";
+        }
+    }
+
+
     @Override
     public String toString() {
-        return "\n"+id+". Koń, nazywa się "+this.name+", ma "+this.age+" lat i robi "+getVoice();
+        return super.id+". Koń, "+this.getSexName()+" "+super.toString()+" "+getVoice();
     }
 }

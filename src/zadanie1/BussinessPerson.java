@@ -1,18 +1,22 @@
 package zadanie1;
 
-public class BussinessPerson extends Person{
+import java.util.List;
 
-    private String NIP;
+public class BussinessPerson extends Human {
 
-    public BussinessPerson(String name, String surname, Pesel pesel, String NIP) {
-        super(name, surname, pesel);
-        this.NIP = NIP;
+
+    public BussinessPerson(int age, List<AnimalInterface> animalInterfaces, String name, String surname, Pesel pesel, Sex sex, String NIP) {
+        super(age, animalInterfaces, name, surname, pesel, sex, NIP);
+    }
+
+    public BussinessPerson(int age, String surname, Pesel pesel, Sex sex, String NIP) {
+        super(age, surname, pesel, sex, NIP);
     }
 
     @Override
     public String toString() {
             return "("+super.getId()+
-                    ") Biznesowy - "+super.toString() + ", NIP: "+NIP;
+                    ") Biznesowy - "+super.toString() + ", NIP: "+super.NIP;
     }
 
 }

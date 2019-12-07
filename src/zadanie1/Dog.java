@@ -1,16 +1,10 @@
 package zadanie1;
 
-public class Dog implements Animal {
+public class Dog extends Animal implements AnimalInterface {
 
-    private int id;
-    private int age;
-    private String name;
+    public Dog(String name, int age, Sex sex, Human owner) {
 
-
-
-    public Dog(int age, String name) {
-        this.age = age;
-        this.name = name;
+        super(name, age, sex, owner);
     }
 
     public void setId(int id) {
@@ -32,8 +26,19 @@ public class Dog implements Animal {
         return this.name;
     }
 
+
+
+    public String getSexName(){
+        if(super.getSex()== Sex.MALE){
+            return "Pies";
+        }else{
+            return "Suka";
+        }
+    }
+
+
     @Override
     public String toString() {
-        return "\n"+id+". Pies, wabi się "+this.name+", ma "+this.age+" lat i robi "+getVoice();
+        return super.id+". "+this.getSexName()+" "+super.toString()+" "+getVoice();
     }
 }

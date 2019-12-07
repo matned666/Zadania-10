@@ -4,19 +4,19 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class People {
-    private List<Person> people;
+    private List<Instance> people;
     private int id;
 
     public People() {
         this.people = new LinkedList<>();
     }
 
-    public void add(Person person){
-        this.people.add(person);
-        person.setId(people.size());
+    public void add(Instance instance){
+        this.people.add(instance);
+        instance.setId(people.size());
     }
 
-    public List<Person> getPeople() {
+    public List<Instance> getPeople() {
         return this.people;
     }
 }
