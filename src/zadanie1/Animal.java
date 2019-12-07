@@ -11,6 +11,10 @@ public abstract class Animal extends Instance {
 
     }
 
+    public Human getOwner() {
+        return owner;
+    }
+
     @Override
     public String toString() {
         return ", nazywa się "+this.name+", ma "+this.age+" lat i robi ";

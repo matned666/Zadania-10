@@ -12,11 +12,11 @@ public class PrivatePerson extends Human {
             if (!getPesel().isValidPesel() || getPesel().getPesel().length() != 11) {
                 throw new IncorrectPeselException();
             }
-            return "("+super.getId()+
-            ") Prywatny - "+super.toString() + ", PESEL: "+getPesel().getPesel();
+            return super.getId()+
+            ". Prywatny - "+super.toString() + ", PESEL: "+getPesel().getPesel();
         }catch(IncorrectPeselException error){
-                return "("+super.getId()+
-                        ") Prywatny - "+super.toString() + ", PESEL: !!! NIEPRAWIDŁOWY PESEL !!!";
+                return super.getId()+
+                        ". Prywatny - "+super.toString() + ", PESEL: !!! NIEPRAWIDŁOWY PESEL !!!";
         }
     }
 }
