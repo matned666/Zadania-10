@@ -17,6 +17,7 @@ public class StaticMethodsPersons {
         people.add(new BussinessPerson("Barbara", "Kot", new Pesel("80010906682"), "7830298371"));
 
 
+
         System.out.println("Wszyscy:");
         people.getPeople().stream()
                 .forEach(System.out::println);
