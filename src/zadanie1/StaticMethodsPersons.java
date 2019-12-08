@@ -14,7 +14,7 @@ public class StaticMethodsPersons <T> {
         people.add(new PrivatePerson("Sylwia", "Majer", new Pesel("86061506888")));
         people.add(new PrivatePerson("Jakub", "Rosowski", new Pesel("86103195393")));
         people.add(new PrivatePerson("Jakub", "Maciaszek", new Pesel("8l120105t93")));
-        people.add(new PrivatePerson("Magdalena", "Grzesiak", new Pesel("82080115382")));
+        people.add(new PrivatePerson("Magdalena", "Grzesiakowa", new Pesel("82080115382")));
         people.add(new PrivatePerson("Bartłomiej", "Lewandowski", new Pesel("89030204396")));
         people.add(new BussinessPerson("Barbara", "Kot", new Pesel("80010906682"), "7830298371"));
 

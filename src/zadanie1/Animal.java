@@ -1,6 +1,6 @@
 package zadanie1;
 
-public abstract class Animal extends Instance {
+public abstract class Animal extends Instance implements AnimalInterface {
 
 
     private Human owner;
@@ -18,6 +18,11 @@ public abstract class Animal extends Instance {
     @Override
     public String toString() {
         return ", nazywa się "+this.name+", ma "+this.age+" lat i robi ";
+    }
+
+    @Override
+    public String getVoice() {
+        return null;
     }
 }
 

@@ -1,6 +1,6 @@
 package zadanie1;
 
-public class Human extends Instance {
+public class Human extends Instance{
 
     public Human() {
     }

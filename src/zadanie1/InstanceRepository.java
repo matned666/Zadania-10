@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.function.*;
 
 
-public interface PersonRepository <T> {
+public interface InstanceRepository<T> {
     List<T> getAll();
     List<T> findByAge(int age);
     Instance getPersonById(int id) ;
